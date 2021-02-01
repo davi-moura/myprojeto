@@ -1,4 +1,7 @@
-    *{
+.ano-atual{
+    font-size: 100%;
+}
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -93,5 +96,4 @@ height: 110px;
     background: #ff105e;
     z-index: 10;
     border-radius: 6px 6px 0 0;
-
 } 
