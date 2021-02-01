@@ -1,9 +1,11 @@
-<html>
-    <head>
-        <title>Dia <?php echo date('d');?></title>
-        <meta http-equiv="refresh" content="30">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia <?php echo date('d');?></title>
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
     function clockRotate(){
     var getMinHand=document.querySelector("#min");
@@ -24,21 +26,28 @@
 }
 window.onload = clockRotate
    </script>
-    <body>
-        <h1>Estamos em <?php echo date('Y');?></h1>
-        <p>
-            Agora são <?php echo date('H'); ?> horas e <?php echo date('i'); ?> minutos.
-        </p>
-        <?php
-            $t = date('H');
-            if ($t <= "12") {
-              echo "Bom Dia";
-            } elseif ($t < "18") {
-              echo "Boa tarde";
-            } else {
-              echo "Boa noite";
-            }
-        ?>
+</head>
+<body>
+<section>
+        <div class="ano-atual">
+            <h1>Estamos em <?php echo date('Y');?></h1>
+        </div>
+        <div class="horario-atual">
+            <p>Agora são <?php echo date('H'); ?> horas e <?php echo date('i'); ?> minutos.</p>
+        </div>
+        <div class="saludos">
+            <?php
+                $t = date('H');
+                if ($t <= "12") {
+                echo "Bom Dia";
+                } elseif ($t < "18") {
+                echo "Boa tarde";
+                } else {
+                echo "Boa noite";
+                }
+            ?>
+        </div>
+        </section>
         <div class="clock">
             <div class="clock-container">
                 <div class="reading"></div>
@@ -47,5 +56,5 @@ window.onload = clockRotate
                 <div class="clock-hand" id="hr"><div class="hour"></div></div>
             </div>
         </div>
-    </body>
-</html> 
+</body>
+</html>
